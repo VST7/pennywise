@@ -1,260 +1,264 @@
 body {
-  font-family: "Lato";
+	font-family: "Lato";
 }
 
 .navlogo {
-  width: 300px;
-  height: 35px;
-  display: inline-block;
-  background: url("../assets/logot.png") no-repeat;
-  background-size: 180px 34.28px;
+	width: 300px;
+	height: 35px;
+	display: inline-block;
+	background: url("../assets/logot.png") no-repeat;
+	background-size: 180px 34.28px;
 }
 
 .flip-card {
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  display: flex;
-  padding: 0rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 2rem;
-  perspective: 1000px;
-  /* Remove this if you don't want the 3D effect */
+	box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+	background-color: transparent;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	padding: 0rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	margin-bottom: 2rem;
+	perspective: 1000px;
+	/* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
 
 .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
 
-.flip-card-front, .flip-card-back, .flip-card-backx {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  /* Safari */
-  backface-visibility: hidden;
+.flip-card-front,
+.flip-card-back,
+.flip-card-backx {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	/* Safari */
+	backface-visibility: hidden;
 }
 
 /* Style the front side (fallback if image is missing) */
 
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+	background-color: #bbb;
+	color: black;
 }
 
 /* Style the back side */
 
 .flip-card-back {
-  bottom: 0;
-  position: absolute;
-  background: linear-gradient(to bottom left, #12ca7e 40%, #14db46 100%);
-  color: white;
-  transform: rotateY(180deg);
+	bottom: 0;
+	position: absolute;
+	background: linear-gradient(to bottom left, #12ca7e 40%, #14db46 100%);
+	color: white;
+	transform: rotateY(180deg);
 }
 
 .flip-card-backx {
-  bottom: 0;
-  position: absolute;
-  background: linear-gradient(to bottom left, #464646 40%, #747474 100%);
-  color: white;
-  transform: rotateY(180deg);
+	bottom: 0;
+	position: absolute;
+	background: linear-gradient(to bottom left, #464646 40%, #747474 100%);
+	color: white;
+	transform: rotateY(180deg);
 }
 
 .btnx {
-  position: absolute;
-  bottom: 0;
-  cursor: default;
-  color: #ffffff;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: linear-gradient(to bottom left, #464646 40%, #747474 100%);
+	position: absolute;
+	bottom: 0;
+	cursor: default;
+	color: #ffffff;
+	padding: 0.8rem;
+	font-size: 14px;
+	text-transform: uppercase;
+	border-radius: 4px;
+	font-weight: 400;
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: linear-gradient(to bottom left, #12ca7e 40%, #14db46 100%);
 }
 
 .btn {
-  position: absolute;
-  bottom: 0;
-  cursor: default;
-  color: #ffffff;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: linear-gradient(to bottom left, #12ca7e 40%, #14db46 100%);
+	position: absolute;
+	bottom: 0;
+	cursor: default;
+	color: #ffffff;
+	padding: 0.8rem;
+	font-size: 14px;
+	text-transform: uppercase;
+	border-radius: 4px;
+	font-weight: 400;
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: linear-gradient(to bottom left, #12ca7e 40%, #14db46 100%);
 }
 
 .btn:hover {
-  background: linear-gradient(to bottom left, #12ad6c 40%, #04ca36 100%);
-  color: #ececec;
+	background: linear-gradient(to bottom left, #12ad6c 40%, #04ca36 100%);
+	color: #ececec;
 }
 
 .testimg {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .card_title {
-  font-family: lato;
-  margin-top: 0.5rem;
-  max-width: 95%;
-  margin: 0 auto;
+	font-family: lato;
+	margin-top: 0.5rem;
+	max-width: 95%;
+	margin: 0 auto;
 }
 
 #vidlink {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
+	font-size: 1.3rem;
+	margin-bottom: 2rem;
 }
 
 /* the css starts from here */
 
 .section-1 {
-  margin-top: 5rem;
+	margin-top: 5rem;
 }
 
 .con-image {
-  max-width: 30rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	max-width: 30rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .con-heading {
-  font-weight: 900;
-  font-size: 3rem;
+	font-weight: 900;
+	font-size: 3rem;
 }
 
 .con-para {
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
+	font-size: 1.2rem;
+	margin-top: 1.5rem;
 }
-.slot-book{
-  font-size: 1.5rem;
-  font-weight: 700;
-
+.slot-book {
+	font-size: 1.5rem;
+	font-weight: 700;
 }
 
 @media screen and (max-width: 987px) {
-  .navlogo {
-    width: 76px;
-    height: 100px;
-    display: inline-block;
-    background: url("./assets/icoc1.png") no-repeat;
-    background-size: 80px 80px;
-  }
-  .navbar-toggler {
-    margin-top: 1rem;
-  }
+	.navlogo {
+		width: 76px;
+		height: 100px;
+		display: inline-block;
+		background: url("./assets/icoc1.png") no-repeat;
+		background-size: 80px 80px;
+	}
+	.navbar-toggler {
+		margin-top: 1rem;
+	}
 }
 
 @media screen and (max-width: 487px) {
-  .navlogo {
-    width: 60px;
-    height: 60px;
-    display: inline-block;
-    background: url("./assets/icoc1.png") no-repeat;
-    background-size: 60px 60px;
-  }
+	.navlogo {
+		width: 60px;
+		height: 60px;
+		display: inline-block;
+		background: url("./assets/icoc1.png") no-repeat;
+		background-size: 60px 60px;
+	}
 }
 
 @media screen and (max-width: 325px) {
-  .flip-card {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  #bigbox {
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 95%;
-    margin: 0 auto;
-  }
+	.flip-card {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	#bigbox {
+		padding-left: 0;
+		padding-right: 0;
+		max-width: 95%;
+		margin: 0 auto;
+	}
 }
 
 .col {
-  display: block;
-  float: left;
-  margin: 1% 0 1% 1.6%;
+	display: block;
+	float: left;
+	margin: 1% 0 1% 1.6%;
 }
 
 .col:first-of-type {
-  margin-left: 0;
+	margin-left: 0;
 }
 
 /* CLEARFIX */
 
-.cf:before, .cf:after {
-  content: " ";
-  display: table;
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table;
 }
 
 .cf:after {
-  clear: both;
+	clear: both;
 }
 
 .cf {
-  *zoom: 1;
+	*zoom: 1;
 }
 
 /* FORM */
 
-.form .plan input, .form .payment-plan input, .form .payment-type input {
-  display: none;
+.form .plan input,
+.form .payment-plan input,
+.form .payment-type input {
+	display: none;
 }
 
- .form label {
-  position: relative;
-  max-width: 100px;
-  background-color: rgb(255, 255, 255);
-  font-size: 16px;
-  text-align: center;
-  height: 40px;
-  /* box-shadow: 2px 2px rgb(116, 116, 116, 0.4); */
-  display: block;
-  cursor: pointer;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  /* border-radius: 5px; */
-  padding: 5px;
-  background: #FFFFFF;
+.form label {
+	position: relative;
+	max-width: 100px;
+	background-color: rgb(255, 255, 255);
+	font-size: 16px;
+	text-align: center;
+	height: 40px;
+	/* box-shadow: 2px 2px rgb(116, 116, 116, 0.4); */
+	display: block;
+	cursor: pointer;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/* border-radius: 5px; */
+	padding: 5px;
+	background: #ffffff;
 
-box-sizing: border-box;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
-} 
+	box-sizing: border-box;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+}
 
 /* .form label{
   position: relative;
@@ -270,51 +274,50 @@ top: 418px;
 
 } */
 
-
-.form .plan input:checked+label, .form .payment-plan input:checked+label, .form .payment-type input:checked+label {
-  border: 1.5px solid #50DD56;
+.form .plan input:checked + label,
+.form .payment-plan input:checked + label,
+.form .payment-type input:checked + label {
+	border: 1.5px solid #50dd56;
 }
 
 .submit {
-  padding: 15px 60px;
-  display: inline-block;
-  border: none;
-  margin: 20px 0;
-  border: 2px solid rgb(63, 63, 63);
-  font-size: 18px;
-  -webkit-transition: transform 0.3s ease-in-out;
-  -o-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
+	padding: 15px 60px;
+	display: inline-block;
+	border: none;
+	margin: 20px 0;
+	border: 2px solid rgb(63, 63, 63);
+	font-size: 18px;
+	-webkit-transition: transform 0.3s ease-in-out;
+	-o-transition: transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
 }
 
 .section-1 {
-  display: flex;
+	display: flex;
 }
 
 .right_contents {
-  margin-left: auto;
-  padding-left: 150px;
+	margin-left: auto;
+	padding-left: 150px;
 }
 
 /* for drop down menu */
-.drop-down__menu{
-  display: inline-block;
-  border: 1px solid gray;
-  border-radius: 4px;
-  padding: 10px 30px 10px 20px;
-  background-color: #ffffff;
-  cursor: pointer;
-  white-space: nowrap;
+.drop-down__menu {
+	display: inline-block;
+	border: 1px solid gray;
+	border-radius: 4px;
+	padding: 10px 30px 10px 20px;
+	background-color: #ffffff;
+	cursor: pointer;
+	white-space: nowrap;
 }
-
 
 /* for pay button */
-#myLink{
-  background-color: #4CB050;
-  border: 0px;
-  color: white;
-  width:60%;
-  border-radius: 4px;
-  text-align: center;
+#myLink {
+	background-color: #4cb050;
+	border: 0px;
+	color: white;
+	width: 60%;
+	border-radius: 4px;
+	text-align: center;
 }
-
