@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <title>Waitlist</title>
+  <style>
+    .navbar-brand {
+      padding-bottom: 9%;
+    }
+
+    #button12 {
+      margin-bottom: 3rem;
+     
+      border: 4px solid #c8e6c9;
+      border-radius: 50px;
+      padding: 15px 44px;
+      display: inline;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 3rem;
+      /* box-shadow: 0 8px 12px rgba(104, 104, 104, 0.3), 0 7px 6px rgba(102, 102, 102, 0.22); */
+
+    }
+
+    #hed {
+      font-size: 2.25rem;
+    }
+
+    #image-wait1 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -3;
+      max-width: 32%;
+    }
+
+    #image-wait2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -3;
+      max-width: 32%;
+    }
+
+    @media screen and (max-width: 520px) {
+      #button12 {
+        font-size: 80%;
+      }
+
+      #hed {
+        font-size: 1.5rem;
+      }
+
+      #image-wait2 {
+
+        top: 14%;
+        left: 89px;
+        max-width: 52%;
+      }
+
+      #image-wait1 {
+        left: 21%;
+        max-width: 62%;
+      }
+
+      #hed {
+        margin-top: 30%;
+      }
+
+    }
+
+    @media screen and (max-width: 330px) {
+      #button12 {
+        font-size: 74%;
+      }
+    }
+  </style>
+
+</head>
+<!-- body starts from here -->
+
+<body>
+
+   <div class="js-container containerx"> 
+
+    <div class="container text-center" style="padding-top: 2rem;">
+      <a class="navbar-brand text-left" href="index.html"><img src="assets/logot.png"></a>
+      <p id="hed" style="font-weight: 700;">Excited to begin your journey of micro-investing?</p>
+      <h4>It’s worth the wait.</h4><br>
+      <p id="button12" >Download the app to join the waitlist</p><br><br>
+      <div style="margin-top: 1rem;"><a href="https://play.google.com/store/apps/details?id=com.pennywise.app" target="_blank"><img src="assets/gp.png"  style="max-width:60px;"></a></div>
+      
+      
+      <!-- <p style="padding-top: 2rem; border: 3px solid black; display: inline; border-width: 10;" ></p> -->
+      <!-- <h4 style="font-family: 'Lato'; margin-top:2rem;">App launches in </h4> -->
+
+      <!-- <div class="container1">
+
+        <div id="timer"></div>
+
+      </div> -->
+
+
+    </div>
+   
+
+  </div>
+  <!-- <script>
+    const year = new Date().getFullYear();
+    const fourthOfJuly = new Date(year, 5, 27,12).getTime();
+    console.log(fourthOfJuly);
+
+    // countdown
+    let timer = setInterval(function () {
+
+      // get today's date
+      const today = new Date().getTime();
+
+      // get the difference
+      const diff = fourthOfJuly - today;
+
+      // math
+      let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      // display
+      document.getElementById("timer").innerHTML =
+        "<div class=\"days\"> \
+  <div class=\"numbers\">" + days + "</div>days</div> \
+<div class=\"hours\"> \
+  <div class=\"numbers\">" + hours + "</div>hours</div> \
+<div class=\"minutes\"> \
+  <div class=\"numbers\">" + minutes + "</div>minutes</div> \
+<div class=\"seconds\"> \
+  <div class=\"numbers\">" + seconds + "</div>seconds</div> \
+</div>";
+
+    }, 1000);
+  </script> -->
+  <script>
+    const Confettiful = function (el) {
+      this.el = el;
+      this.containerEl = null;
+
+      this.confettiFrequency = 3;
+      this.confettiColors = ['#fce18a', '#ff726d', '#b48def', '#f4306d'];
+      this.confettiAnimations = ['slow', 'medium', 'fast'];
+
+      this._setupElements();
+      this._renderConfetti();
+    };
+
+    Confettiful.prototype._setupElements = function () {
+      const containerEl = document.createElement('div');
+      const elPosition = this.el.style.position;
+
+      if (elPosition !== 'relative' || elPosition !== 'absolute') {
+        this.el.style.position = 'relative';
+      }
+
+      containerEl.classList.add('confetti-container');
+
+      this.el.appendChild(containerEl);
+
+      this.containerEl = containerEl;
+    };
+
+    Confettiful.prototype._renderConfetti = function () {
+      this.confettiInterval = setInterval(() => {
+        const confettiEl = document.createElement('div');
+        const confettiSize = Math.floor(Math.random() * 3) + 7 + 'px';
+        const confettiBackground = this.confettiColors[Math.floor(Math.random() * this.confettiColors.length)];
+        const confettiLeft = Math.floor(Math.random() * this.el.offsetWidth) + 'px';
+        const confettiAnimation = this.confettiAnimations[Math.floor(Math.random() * this.confettiAnimations.length)];
+
+        confettiEl.classList.add('confetti', 'confetti--animation-' + confettiAnimation);
+        confettiEl.style.left = confettiLeft;
+        confettiEl.style.width = confettiSize;
+        confettiEl.style.height = confettiSize;
+        confettiEl.style.backgroundColor = confettiBackground;
+
+        confettiEl.removeTimeout = setTimeout(function () {
+          confettiEl.parentNode.removeChild(confettiEl);
+        }, 3000);
+
+        this.containerEl.appendChild(confettiEl);
+      }, 25);
+    };
+
+    window.confettiful = new Confettiful(document.querySelector('.js-container'));
+  </script> 
+  
+
+
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
+</body>
+
+</html>

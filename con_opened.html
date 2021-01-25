@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169295658-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-169295658-1');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="./css/constyle.css">
+  <link rel="stylesheet" href="./css/constyle2.css">
+  <!--this is the new one -->
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Convergence&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="./css/style.css"> -->
+  <title>Confrences</title>
+
+</head>
+
+<body>
+
+  <div class="container" id="bigbox">
+    <div class="row" id="first-row">
+
+      <div class="col-md-12 col-sm-12" id="sic">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light " style="background-color: #fff;">
+          <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block">
+              <!-- hidden spacer to center brand on mobile --></span>
+            <a class="navbar-brand" href="index.html">
+              <div class="navlogo"></div>
+              <!-- <img style="max-width: 180px;" src="assets/logot.png"> -->
+            </a>
+            <div class="w-100 text-right">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+              <li class="nav-item">
+                <a class="nav-link " href="index.html">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="conferences.html">Conferences <span class="sr-only">(current)</span></a>
+              </li>
+
+              <li class="nav-item ">
+                <a class="nav-link" href="./waitlist.html" target="_blank">App</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <section class="section-1">
+      <div class="left_image">
+        <img class="con-image" id="myImg">
+
+      </div>
+      <div class="right_contents">
+        <h2 class="con-heading" id="heading"></h2>
+
+        <p class="con-para" id="para"></p>
+
+        <h3 class="slot-book">Book your slot</h3>
+
+
+        <div class="drop-down">
+
+
+          <div class="drop-down__menu-box">
+            <select id="yearContainer" class="drop-down__menu" style="-webkit-appearance: none;">
+              <!-- <option data-name="jan" class="drop-down__item">January </option>
+              <option data-name="feb" class="drop-down__item">February </option>
+              <option data-name="march" class="drop-down__item">March </option>
+              <option data-name="apr" class="drop-down__item">April </option>
+              <option data-name="may" class="drop-down__item">May </option>
+              <option data-name="june" class="drop-down__item">June </option>
+              <option data-name="july" class="drop-down__item">July </option>
+              <option data-name="aug" class="drop-down__item">August </option>
+              <option data-name="sept" class="drop-down__item">September </option>
+              <option data-name="oct" class="drop-down__item">October </option>
+              <option data-name="nov" class="drop-down__item">November </option>
+              <option data-name="march" class="drop-down__item">December</option> -->
+
+
+            </select>
+          </div>
+
+        </div>
+        <form class="form cf">
+
+          <!-- <div class="oct box"> -->
+          <p>Select date</p>
+          <section id="radioContainer" class="plan cf">
+            <!-- 
+              <input type="radio" name="radio1" id="free" value-date="oct-twelve"><label class="free-label four col"
+                for="free">12</label>
+                
+              <input type="radio" name="radio1" id="basic" value-date="oct-thirteen"><label class="basic-label four col"
+                for="basic">13 Oct</label>
+              <input type="radio" name="radio1" id="premium" value-date="oct-fourteen"><label
+                class="premium-label four col" for="premium">14 Oct</label> -->
+          </section>
+
+          <section id="timeDisplay" class="payment-plan cf">
+            <!-- <div class="oct-twelve selectt">
+              12AM and 12PM at 12October.
+              </div> -->
+          </section>
+
+
+          <a onclick='myFunction()' href="" id="myLink" class="submit" class="button">Pay</a>
+        </form>
+    </section>
+  </div>
+
+
+  </div>
+  <script>
+
+    $(document).ready(function () {
+      $("select").change(function () {
+        $(this).find("option:selected").each(function () {
+          var optionValue = $(this).attr("data-name");
+          if (optionValue) {
+            $(".box").not("." + optionValue).hide();
+            $("." + optionValue).show();
+          } else {
+            $(".box").hide();
+          }
+        });
+      }).change();
+    });
+
+  </script>
+  <!-- to change button link -->
+  <script>
+    function myFunction() {
+
+      if (document.getElementById('free').checked) {
+        document.getElementById('myLink').href = "./index.html";
+      }
+    }
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(".selectt").hide();
+      $('input[type="radio"]').click(function () {
+        var inputValue = $(this).attr("value-date");
+        if (inputValue) {
+          var targetBox = $("." + inputValue);
+          $(".selectt").not(targetBox).hide();
+          $(targetBox).show();
+        }
+        else {
+          $(".selectt").hide();
+        }
+      });
+    }); 
+  </script>
+  <script>
+    var url = new URL(window.location.href);
+    var id = url.searchParams.get("id");
+    var strapiUrl = "http://localhost:1337";
+    fetch("http://localhost:1337/conferences?id=" + id)
+      //_where[id]=1
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        data.forEach(conference => {
+          var years = document.createElement("option")
+          var dateContainers = document.createElement("div")
+          var dateSelection = document.createElement("input")
+          var dateDisplay = document.createElement("label")
+          var timeDisplay = document.createElement("div")
+          var image = document.createElement("img")
+          document.getElementById("myImg").setAttribute("src", strapiUrl + conference.banner[0].formats.medium.url)
+          document.getElementById("heading").innerHTML = conference.main_heading
+          document.getElementById("para").innerHTML = conference.longDescription
+
+          document.getElementbyId('yearContainer').appendChild(years);
+          document.getElementbyId('radioContainer').appendChild(dateSelection);
+          document.getElementbyId('timeDisplay').appendChild(timeDisplay);
+
+          years.setAttribute('data-name', conference.year)
+          years.setAttribute('class', 'drop-down__item')
+          years.innerHTML = conference.year
+          dateContainers.setAttribute('type', 'radio')
+          dateSelection.setAttribute('name', 'radio1')
+          dateSelection.setAttribute('id', conference.year + conference.date)
+          dateSelection.setAttribute('value-date', conference.year + "-" + conference.date)
+          dateDisplay.setAttribute('class', +conference.year + conference.date + ' four col')
+          dateDisplay.setAttribute('for', +conference.year + conference.date + ' four col')
+          timeDisplay.setAttribute('class', conference.year + "-" + conference.date + ' selectt')
+          dateSelection.innerHTML += dateDisplay.outerHTML
+          dateDisplay.innerHTML = conference.date
+          timeDisplay.innerHTML = "Conferene is from " + conference.startTime + " to " + conference.endTime //check the col name in table
+
+
+
+
+        }
+        )
+      })
+      .catch(error => console.log(error))
+  </script>

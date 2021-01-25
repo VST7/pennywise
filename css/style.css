@@ -1,0 +1,1751 @@
+#parent {
+    height: 430px;
+    width: 350px;
+    border: solid 1px #000;
+    /* overflow-y: hidden;
+    overflow-x: hidden; */
+}
+
+.backgroundOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ecfff9;
+    opacity: .85;
+    filter: alpha(opacity=85);
+    -moz-opacity: .85;
+    z-index: 101;
+    display: none;
+}
+
+/*   This is the Popup Window   */
+
+.delayedPopupWindow {
+    display: none;
+    position: fixed;
+    width: auto;
+    text-align: center;
+    max-width: 800px;
+    /* height: 310px; */
+    top: 30%;
+    left: 25%;
+    /* margin-left: -260px; */
+    margin-top: -180px;
+    background-color: #fff;
+    /* border: 2px solid #333; */
+    z-index: 102;
+    padding: 10px 20px;
+}
+
+.navlogo {
+    width: 300px;
+    height: 35px;
+    display: inline-block;
+    background: url("../assets/logot.png") no-repeat;
+    background-size: 180px 34.28px;
+}
+
+/*   This is the closing button  */
+
+#btnClose {
+    width: 100%;
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*   This is the closing button hover state  */
+
+#btnClose:hover {
+    color: #00ff08;
+}
+
+/*   This is the description headline and paragraph for the form   */
+
+#delayedPopup>div.formDescription {
+    float: left;
+    display: block;
+    width: 44%;
+    padding: 1% 3%;
+    font-size: 18px;
+    color: #666;
+    clear: left;
+}
+
+/*   This is the styling for the form's headline   */
+
+#delayedPopup>div.formDescription h2 {
+    color: #444444;
+    font-size: 36px;
+    line-height: 40px;
+}
+
+/* 
+////////// MailChimp Signup Form //////////////////////////////
+*/
+
+/*   This is the signup form body  */
+
+#delayedPopup #mc_embed_signup {
+    float: left;
+    width: 47%;
+    padding: 1%;
+    display: block;
+    font-size: 16px;
+    color: #666;
+    margin-left: 1%;
+}
+
+/*   This is the styling for the signup form inputs  */
+
+#delayedPopup #mc-embedded-subscribe-form input {
+    width: 95%;
+    height: 30px;
+    font-size: 18px;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+/*   This is the styling for the signup form inputs when they are being hovered with the mouse  */
+
+#delayedPopup #mc-embedded-subscribe-form input:hover {
+    border: solid 2px #40c348;
+    box-shadow: 0 1px 3px #AAAAAA;
+}
+
+/*   This is the styling for the signup form inputs when they are focused  */
+
+#delayedPopup #mc-embedded-subscribe-form input:focus {
+    border: solid 2px #40c348;
+    box-shadow: none;
+}
+
+/*   This is the styling for the signup form submit button  */
+
+#delayedPopup #mc-embedded-subscribe {
+    width: 100%!important;
+    height: 40px!important;
+    margin: 10px auto 0 auto;
+    background: #5D9E62;
+    border: none;
+    color: #fff;
+}
+
+/*   This is the styling for the signup form submit button hover state  */
+
+#delayedPopup #mc-embedded-subscribe:hover {
+    background: #40c348;
+    color: #fff;
+    box-shadow: none!important;
+    cursor: pointer;
+}
+
+/* the code of popup starts from here */
+
+.headerpopup {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.headerpopuptext {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.popuplogo {
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.headerpopuptext1 {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-size: 1.5rem;
+    color: #00ff0a;
+}
+
+.headerpopuptext2 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 900;
+    font-family: righteous, lato, sans-serif;
+}
+
+.popuppara {
+    color: #ffffff;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+#delayedPopup {
+    background: linear-gradient(-45deg, #80ffb994, #55ff6c86, #1fff9779, #c6ff5ca4);
+    /* background: linear-gradient(-45deg, #17598f, #6a885e, #23a6d5, #23d5ab); */
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* the popup code ends here */
+
+.content-1 .card img {
+    max-width: 40px;
+}
+
+.second .card img {
+    max-width: 40px;
+}
+
+#security-head {
+    padding-top: 1.5rem;
+    font-weight: 700;
+    font-size: 2.25rem;
+    margin-bottom: 2%;
+}
+
+#parent>button {
+    opacity: 0.3;
+    position: relative;
+    float: right;
+    right: 10px;
+    top: -430px;
+    transition: 0.5s;
+}
+
+#parent>button {
+    opacity: 1;
+}
+
+* {
+    font-family: 'lato', sans-serif;
+    font-weight: 500;
+    overflow-x: hidden;
+}
+
+header {
+    padding-left: 0;
+}
+
+#demo1 {
+    display: flex;
+    flex-direction: row;
+    height: 180px;
+}
+
+#demoday, #demohrs, #demomin, #demosec {
+    margin-left: 4rem;
+    width: 150px;
+    height: 150px;
+    font-size: 4.6rem;
+    color: #4CAF50;
+    background: rgb(240, 240, 240);
+    border-radius: 8px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    text-align: center;
+}
+
+.navbar-brand img {
+    max-width: 200px;
+}
+
+.header1 {
+    color: #388e3c;
+    margin-top: 3rem;
+}
+
+.header2 {
+    font-weight: 900;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    margin-top: 3rem;
+}
+
+#para1 {
+    color: #9e9e9e;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+#bottomcontent {
+    margin-left: 3rem;
+}
+
+.chat-bubble {
+    margin-bottom: -6rem;
+    margin-left: -6rem;
+    max-width: 7rem;
+    border-radius: 7px;
+    height: 1.8rem;
+    box-shadow: 2px 2px 3px gray;
+}
+
+#bottomtext {
+    padding-top: 10rem;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.2;
+}
+
+#bottompara {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 1.7rem;
+    color: grey;
+}
+
+#button1 {
+    margin-top: 1rem;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 44px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    margin-top: 1rem;
+}
+
+#button1:hover {
+    background-color: #00A006;
+}
+
+.second-section {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    display: flex;
+    flex-direction: row;
+}
+
+.content-1 {
+    margin-left: 6rem;
+}
+
+.image-1 {
+    margin-left: 17rem;
+    width: 560px;
+}
+
+.section-1 {
+    margin-top: 10%;
+    background-color: #f3f3f3;
+}
+
+.second-section .card-text {
+    margin-left: 2.8rem;
+}
+
+.section-2 .card .row {
+    padding-bottom: 5%;
+}
+
+.image1 {
+    margin-left: 0rem;
+}
+
+.section-1 .card .row {
+    padding-bottom: 5%;
+}
+
+.section-1 .card {
+    background-color: #f3f3f3;
+}
+
+#first-col {
+    margin-left: 6rem;
+}
+
+.card .row {
+    padding-bottom: 8%;
+}
+
+.card-title {
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.card-text {
+    margin-top: 1%;
+    color: grey;
+}
+
+.card {
+    border: 0;
+}
+
+.section-3 {
+    background-color: #f3f3f3;
+}
+
+.section-3 h6 {
+    font-size: 1.2rem;
+    color: grey;
+}
+
+.section-3 .card-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.section-3 .card-text {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: gray;
+    text-align: justify;
+}
+
+.section-3 .card-body {
+    padding: 0rem;
+}
+
+.section-3 .card {
+    background-color: #f3f3f3;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.img-fluid {
+    max-width: 70%;
+}
+
+.section-4 {
+    background: #fff;
+    padding-top: 5rem;
+}
+
+.section-4 video {
+    padding-left: 0;
+}
+
+a {
+    color: #4caf50;
+}
+
+.second-section {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+footer {
+    background-color: #2f2f2f;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+
+.container-fluid {
+    width: 75%;
+}
+
+.footlogo2 {
+    margin-top: 50px;
+    margin-bottom: 5rem;
+}
+
+.third-section {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.section-3 {
+    padding-top: 5%;
+    padding-bottom: 8%;
+}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+
+.open-button {
+    border: 0px;
+    background-color: rgba(76, 175, 79, 0);
+    cursor: pointer;
+    opacity: 1;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+}
+
+/* The popup chat - hidden by default */
+
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: #c8e6c9;
+    border-radius: 10px;
+    border: none;
+    z-index: 999;
+}
+
+/* Full-width textarea */
+
+.form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: white;
+    resize: none;
+    border-radius: 20px;
+    min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+
+/* Set a style for the submit/send button */
+
+.form-container .btn {
+    background-color: #4caf50;
+    color: white;
+    border-radius: 30px;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Add a background color to the cancel button */
+
+.form-container .cancel {
+    background-color: #757575;
+}
+
+#sic {
+   
+    text-align: left;
+}
+
+#sic1 {
+    padding-top: 15%;
+}
+
+#headimg {
+    max-width: 500px;
+    margin-top: 5rem;
+    margin-left: 3rem;
+}
+
+#img1 {
+    max-width: 68%;
+}
+
+#img2 {
+    max-width: 87%;
+    padding-left: 3.5rem;
+}
+
+.image2 {
+    margin-top: 5rem;
+}
+
+#table2 {
+    padding-left: 25%;
+}
+
+#gif {
+    margin-left: 4rem;
+}
+
+#apple {
+    margin-left: 2rem;
+    max-width: 190px;
+}
+
+#google {
+    max-width: 187px;
+}
+
+#copyright {
+    margin-left: 1.5rem;
+}
+
+#navbtn {
+    max-width: 130px;
+}
+
+/* .card-text {
+    margin-left: 8.5%;
+} */
+
+.section-2 .card-text {
+    margin-left: 3rem;
+}
+
+.section-1 .class-title {
+    font-size: 1.25rem;
+}
+
+.section-2 .class-title {
+    font-size: 1.25rem;
+}
+
+#footerlogo {
+    max-width: 260px;
+}
+
+.header2_abt {
+    font-family: 'Convergence', sans-serif;
+    text-align: center;
+    color: #f3f3f3;
+    font-size: 7rem;
+    font-weight: 900;
+    margin-top: 2rem;
+
+}
+
+#sicabt {
+    padding-top: 5%;
+    text-align: left;
+}
+
+.underlined {
+    border-bottom: 4px solid #4bbc50;
+    display: inline-block;
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+.textabt {
+    margin-top: 14rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+#imgabt1 {
+    width: 90%;
+    margin-top: 5rem;
+}
+
+.navbar-brandabt {
+    margin-top: -1%;
+}
+
+.navbar-brandabt img {
+    max-width: 200px;
+    padding-bottom: 3%;
+}
+
+.list-unstyled {
+    line-height: 1.7rem;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: #8c8c8c;
+}
+
+.list-unstyled li {
+    padding-bottom: 0.5rem;
+}
+
+#four-image {
+    max-width: 60%;
+    margin-top: 2rem;
+}
+
+#teamabout {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.about-second-section {
+    height: 50%;
+    background: linear-gradient(to bottom, #eefff2 60%, white 40%);
+    margin-top: 5rem;
+}
+
+.about-third-section {
+    background-color: #eefff2;
+    margin-top: 7rem;
+}
+
+#quicklinks {
+    margin-top: 2rem;
+}
+
+#about-second-image {
+    max-width: 60%;
+    margin-top: 2rem;
+}
+
+#message-image {
+    position: absolute;
+    right: 0;
+    max-width: 90%
+}
+
+#sic {
+    padding-top: 5%;
+    text-align: left;
+}
+
+#xyz {
+    max-width: 100%;
+    margin-top: 3.5rem;
+}
+
+.list-unstyled li {
+    line-height: 1.7;
+}
+
+@media screen and (max-width:1290px) {
+    .delayedPopupWindow {
+        left: 31%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .textabt {
+        margin-top: 14rem;
+    }
+    .delayedPopupWindow {
+        margin-left: -60px;
+        max-width: 480px;
+    }
+}
+
+@media screen and (max-width: 987px) {
+    .navlogo {
+        width: 180px;
+        height: 100px;
+        display: inline-block;
+        background: url("../assets/icoc1.png") no-repeat;
+        background-size: 80px 80px;
+    }
+    .navbar-toggler {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 487px) {
+    .navlogo {
+        width: 140px;
+        height: 100px;
+        display: inline-block;
+        background: url("../assets/icoc1.png") no-repeat;
+        background-size: 60px 60px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .textabt {
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .delayedPopupWindow {
+        margin-left: -88px;
+    }
+    #imgabt1 {
+        width: 75%;
+        margin-top: 1rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+    #four-image {
+        max-width: 100%;
+    }
+    #about-second-image {
+        max-width: 100%;
+    }
+    .about-second-section {
+        background: linear-gradient(to bottom, #eefff2 75%, white 25%);
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .underlined {
+        font-size: 2.5rem;
+    }
+    .header2_abt {
+        font-size: 4rem;
+    }
+    #four-image {
+        text-align: center;
+    }
+    .textabt {
+        text-align: center;
+    }
+    #sicabt {
+        text-align: center;
+    }
+    .about-second-section {
+        background: linear-gradient(to bottom, #eefff2 75%, white 25%);
+    }
+    #about-second-image {
+        max-width: 100%;
+        margin-top: 0rem;
+    }
+    #message-image {
+        display: none;
+    }
+    #xyz {
+        max-width: 100%;
+        margin-top: 0rem;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .delayedPopupWindow {
+        margin-left: -39px;
+        left: 20%;
+        max-width: 330px;
+        top: 36%;
+    }
+    .popuplogo {
+        width: 60%;
+    }
+    .headerpopuptext1 {
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }
+    .headerpopuptext2 {
+        font-size: 1.4rem;
+    }
+    .headerpopuptext {
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }
+    .popuppara {
+        font-size: 1.3rem;
+    }
+    #sic {
+        text-align: center;
+        padding-bottom: 0rem;
+        padding-bottom: 2%;
+    }
+    .contentabt {
+        text-align: left;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    #headimg{
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .delayedPopupWindow {
+        margin-left: -57px;
+        left: 21%;
+    }
+    .header2_abt {
+        font-size: 6rem;
+    }
+    .about-second-section {
+        background: linear-gradient(to bottom, #eefff2 80%, white 20%);
+    }
+}
+
+@media screen and (max-width: 349px) {
+    .list-unstyled {
+        font-size: 1rem;
+    }
+    .textabt {
+        font-size: 2rem;
+    }
+}
+
+/* .container1 {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    width: 650px;
+} */
+
+#timer {
+    color: #F6F4F3;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-size: .7em;
+    letter-spacing: 5px;
+}
+
+.days, .hours, .minutes, .seconds {
+    display: inline-block;
+    padding: 20px;
+    width: 120px;
+    border-radius: 5px;
+}
+
+.days {
+    background-image: linear-gradient(to bottom right, #388e3c, #50c956);
+}
+
+.hours {
+    background-image: linear-gradient(to bottom right, #388e3c, #50c956);
+}
+
+.minutes {
+    background-image: linear-gradient(to bottom right, #388e3c, #50c956);
+}
+
+.seconds {
+    background-image: linear-gradient(to bottom right, #388e3c, #50c956);
+}
+
+.numbers {
+    color: #ffffff;
+    font-size: 4em;
+}
+
+@keyframes confetti-slow {
+    0% {
+        transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+    }
+    100% {
+        transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg);
+    }
+}
+
+@keyframes confetti-medium {
+    0% {
+        transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+    }
+    100% {
+        transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg);
+    }
+}
+
+@keyframes confetti-fast {
+    0% {
+        transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+    }
+    100% {
+        transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg);
+    }
+}
+
+.containerx {
+    width: 100vw;
+    height: 100vh;
+}
+
+.confetti-container {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -11;
+}
+
+.confetti {
+    position: absolute;
+    z-index: -3;
+    top: -10px;
+    border-radius: 0%;
+}
+
+.confetti--animation-slow {
+    animation: confetti-slow 2.25s linear 1 forwards;
+}
+
+.confetti--animation-medium {
+    animation: confetti-medium 1.75s linear 1 forwards;
+}
+
+.confetti--animation-fast {
+    animation: confetti-fast 1.25s linear 1 forwards;
+}
+
+#socialicons {
+    margin-top: 1.2rem;
+}
+
+#para1 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+#one-app {
+    color: #666666;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+#security-para {
+    margin-bottom: 6%;
+    padding: 0 21rem;
+}
+
+@media screen and (max-width: 1450px) {
+    .image-1 {
+        margin-left: 14rem;
+        width: 560px;
+    }
+    #img1 {
+        max-width: 70%;
+    }
+    .delayedPopupWindow {
+        left: 22%;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    #bottomcontent {
+        margin-left: 2rem;
+    }
+    #bottomtext {
+        padding-top: 6rem;
+    }
+    #table2 {
+        padding-left: 20%;
+    }
+    .image2 {
+        margin-top: 9rem;
+    }
+    #img2 {
+        max-width: 94%;
+    }
+    .image-1 {
+        margin-left: 15rem;
+        width: 540px;
+    }
+    #img1 {
+        max-width: 87%;
+    }
+    .delayedPopupWindow {
+        left: 19%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .image-1 {
+        margin-left: 3rem;
+    }
+    #headimg {
+        max-width: 475px;
+        margin-top: 5rem;
+        margin-left: 0rem;
+    }
+    #first-col {
+        margin-left: 4rem;
+    }
+    .second-section .card-text {
+        text-align: justify;
+    }
+    #table2 {
+        padding-left: 18%;
+    }
+    #security-para {
+        padding: 0 15rem;
+    }
+    .textabt {
+        margin-top: 14rem;
+    }
+    .delayedPopupWindow {
+        margin-left: 0;
+        left: 6%;
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .navbar-brand {
+        margin-right: 0rem;
+    }
+    #apple {
+        margin-left: 0;
+        max-width: 184px;
+    }
+    #google {
+        max-width: 181px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .header1 {
+        font-size: 2.3rem;
+        margin-top: 0;
+    }
+    #para1 {
+        font-size: 2rem;
+    }
+    #one-app {
+        font-size: 2.3rem;
+    }
+    .header2 {
+        font-size: 3.7rem;
+        margin-top: 26rem;
+    }
+    #sic1 {
+        padding-top: 0;
+        position: absolute;
+        top: 14rem;
+        width: 90%;
+        padding: 0;
+    }
+    #headimg {
+        margin-top: 0;
+        margin-left: 0;
+    }
+    #empty-box {
+        max-width: 0;
+    }
+    #socialicons {
+        padding: 0;
+    }
+    #first-col {
+        margin-left: 3rem;
+    }
+    .section-2 .card .row {
+        padding-left: 9%;
+    }
+    #table2 {
+        padding-left: 0;
+    }
+    #first-header {
+        text-align: center;
+    }
+    .col-sm-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #sic {
+        text-align: center;
+    }
+    .image1 {
+        margin-left: 0;
+    }
+    #sic {
+        max-width: 100%;
+    }
+    .second-section {
+        flex-direction: column;
+    }
+    #img1 {
+        max-width: 50%;
+        margin-top: 0;
+    }
+    .image-1 {
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+    .content-1 {
+        margin-left: 0;
+        width: auto;
+        text-align: center;
+    }
+    .image2 {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    #img2 {
+        padding-left: 0;
+    }
+    #sec3 {
+        flex-direction: column-reverse;
+    }
+    .image1 {
+        margin-top: 3rem;
+    }
+    #first-col {
+        padding-left: 0;
+    }
+    .section-1 .card .row {
+        padding-left: 10%;
+    }
+    #apple {
+        max-width: 160px;
+    }
+    #google {
+        max-width: 155px;
+    }
+    #button1 {
+        padding: 18px 61px;
+        font-size: 25px;
+    }
+    .card {
+        font-size: 1.3rem;
+    }
+    #security-para {
+        font-size: 1.3rem;
+        padding: 0 6rem;
+    }
+    .section-3.card-text {
+        font-size: 1.3rem;
+    }
+    .textabt {
+        margin-top: 4rem;
+    }
+    .delayedPopupWindow {
+        margin-left: 0px;
+        left: 0;
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    #img1 {
+        max-width: 50%;
+        margin-top: 0;
+    }
+    #button1 {
+        padding: 15px 44px;
+        color: #ffffff;
+        font-size: 16px;
+    }
+    .card {
+        font-size: 1.3rem;
+    }
+    #socialicons {
+        padding: 0 15px;
+    }
+    .js-container h1 {
+        font-size: 1rem;
+    }
+    .js-container h4 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    .js-container h4 {
+        font-size: 1.2rem;
+    }
+    #timer {
+        color: #F6F4F3;
+        /* text-align: center; */
+        text-transform: uppercase;
+        font-family: "Lato", sans-serif;
+        font-size: .4em;
+        letter-spacing: 5px;
+        padding: 0;
+        margin: 0;
+    }
+    .days, .hours, .minutes, .seconds {
+        display: inline-block;
+        padding: 5px;
+        width: 20%;
+        border-radius: 5px;
+    }
+    #apple {
+        margin-left: 0;
+        max-width: 184px;
+    }
+    .section-3.card-text {
+        font-size: 1rem;
+    }
+    #security-para {
+        font-size: 1rem;
+    }
+    .section-2 .card {
+        font-size: 1.2rem;
+    }
+    .second-section .card {
+        font-size: 1.2rem;
+    }
+    .section-1 .card .row {
+        padding-left: 5%;
+    }
+    .delayedPopupWindow {
+        left: 0%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .footlogo2 {
+        margin-bottom: 0;
+    }
+    .section-2 .card {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .card {
+        font-size: 1rem;
+    }
+    #one-app {
+        font-size: 1.3rem;
+    }
+    #para1 {
+        font-size: 1.2rem;
+        line-height: 2;
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+    .header1 {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+    .header2 {
+        margin-top: 17rem;
+        font-size: 1.9rem;
+    }
+    #button1 {
+        margin-top: 1rem;
+    }
+    .section-1 .card .row {
+        padding-left: 0%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .section-2 .card .row {
+        padding-left: 4%;
+    }
+    .section-1 .class-title {
+        font-size: 1.1rem;
+    }
+    .section-3 h6 {
+        font-size: 1rem;
+    }
+    .section-4 h4 {
+        font-size: 1rem;
+    }
+    .section-4 {
+        padding-top: 3rem;
+    }
+    .section-2 .class-title {
+        font-size: 1.1rem;
+    }
+    #first-col {
+        margin-left: 0rem;
+    }
+    #sic {
+        text-align: center;
+        padding-bottom: 0rem;
+        padding-top: 2%;
+    }
+    #sic1 {
+        position: absolute;
+        top: 10rem;
+    }
+    .image-1 {
+        width: auto;
+        text-align: center;
+    }
+    .image1 {
+        margin-left: 0;
+        max-width: 397px;
+        margin-top: 2rem;
+    }
+    .image2 {
+        text-align: center;
+    }
+    #headimg {
+        max-width: 310px;
+        margin-left: 0;
+        margin-top: 1.5rem;
+    }
+    #table2 {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    #gif {
+        margin-left: 0;
+    }
+    #apple {
+        margin-left: 0;
+        max-width: 133px;
+    }
+    #copyright {
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    #navbtn {
+        max-width: 120px;
+    }
+    #abc {
+        right: -2rem;
+    }
+    #security-para {
+        padding: 0;
+        margin-top: 2rem;
+    }
+    #sic1 {
+        width: 100%;
+    }
+    .second-section .card {
+        font-size: 1rem;
+    }
+    .section-2 .card {
+        font-size: 1rem;
+    }
+    .popuplogo {
+        width: 100%;
+    }
+    .delayedPopupWindow {
+        left: 0;
+        max-width: 415px;
+        top: 50%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .list-unstyled {
+        font-size: 1.2rem;
+    }
+    #sic1 {
+        width: 100%;
+    }
+    #security-head {
+        font-size: 2.1rem;
+        margin-bottom: 6%;
+    }
+    #one-app {
+        font-size: 1rem;
+    }
+    #para1 {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    #button1 {
+        padding: 11px 32px;
+    }
+    .header1 {
+        font-size: 1.3rem;
+        margin-top: 0;
+    }
+    .header2 {
+        margin-top: 17rem;
+        font-size: 1.6rem;
+    }
+    #button1 {
+        margin-top: 1rem;
+    }
+    #sic1 {
+        padding-top: 0%;
+        top: 9rem;
+    }
+
+    .section-1 .card .row {
+        padding-left: 0;
+    }
+    .section-2 .card .row {
+        padding-left: 0;
+    }
+    .card-title {
+        font-size: 0.9rem;
+    }
+    .header2_abt {
+        font-size: 4rem;
+    }
+    .delayedPopupWindow {
+        margin-left: 0%;
+        left: 0;
+        top: 50%;
+    }
+}
+
+@media screen and (max-width: 367px) {
+    .content-1 .card, .second .card {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width:349px) {
+    .content-1 .card {
+        font-size: 0.8rem;
+    }
+    .second .card {
+        font-size: 0.8rem;
+    }
+    .content-1 .card img, .second .card img {
+        max-width: 36px;
+    }
+    .security-para {
+        font-size: 0.8rem;
+    }
+    .section-3 .card-text {
+        font-size: 0.8rem;
+    }
+    #sic1 {
+        width: 100%;
+    }
+    .section-2 .card-text {
+        margin-left: 2.67rem;
+    }
+    .underlined {
+        font-size: 2.2rem;
+    }
+    .header2_abt {
+        font-size: 4rem;
+    }
+    .textabt {
+        font-size: 1.8rem;
+    }
+    .list-unstyled {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:330px) {
+    .navlogo{
+        width: 140px;
+    }
+    .delayedPopupWindow {
+        margin-left: 0px;
+        max-width: 327px;
+        top: 20rem;
+        left: 0;
+    }
+    .popuppara {
+        font-size: 1.1rem;
+    }
+    .headerpopuptext2 {
+        margin-top: 1.5rem;
+    }
+    .headerpopuptext {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width:315px) {
+    .second-section .card {
+        font-size: 0.7rem;
+    }
+    .section-2 .card {
+        font-size: 0.7rem;
+    }
+    .second-section .card-text {
+        margin-left: 2.5rem;
+    }
+}
+
+@media screen and (max-width:275px) {
+    .second-section .card {
+        font-size: 0.6rem;
+    }
+    .section-2 .card {
+        font-size: 0.6rem;
+    }
+    .section-2 .card {
+        width: 93%;
+    }
+    .section-2 .card-text {
+        margin-left: 2.63rem;
+    }
+}
+
+@media screen and (max-width:250px) {
+    .second-section .card {
+        font-size: 0.5rem;
+    }
+    .section-2 .card {
+        font-size: 0.5rem;
+    }
+}
+
+.site-footer {
+    background-color: #26272b;
+    padding: 45px 0 20px;
+    background-color: #26272b;
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+}
+
+.site-footer hr {
+    border-top-color: #bbb;
+    opacity: 0.5
+}
+
+.site-footer hr.small {
+    margin: 20px 0
+}
+
+.site-footer h6 {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px
+}
+
+.site-footer a {
+    color: #737373;
+}
+
+.site-footer a:hover {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.footer-links {
+    padding-left: 0;
+    list-style: none
+}
+
+.footer-links li {
+    display: block
+}
+
+.footer-links a {
+    color: #b2b2b2;
+}
+
+.footer-links .footer-links a:focus, .footer-links a:hover {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.footer-links.inline li {
+    display: inline-block
+}
+
+.social-icons {
+    margin-left: -6px;
+    margin-top: 2rem;
+}
+
+.site-footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: #33353d
+}
+
+.copyright-text {
+    margin: 0
+}
+
+@media (max-width:991px) {
+    .site-footer [class^=col-] {
+        margin-bottom: 30px
+    }
+}
+
+@media (max-width:849px) {
+    #srink {
+        display: none;
+    }
+    .site-footer {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width:767px) {
+    .site-footer {
+        padding-bottom: 0
+    }
+    .site-footer .copyright-text, .site-footer {
+        text-align: center
+    }
+}
+
+.social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 4px
+}
+
+.social-icons li.title {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: #96a2b2;
+    font-weight: 700;
+    font-size: 13px
+}
+
+.social-icons a {
+    background-color: #eceeef;
+    color: #818a91;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear
+}
+
+.social-icons a:active, .social-icons a:focus, .social-icons a:hover {
+    color: #fff;
+    background-color: #29aafe
+}
+
+.social-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px
+}
+
+.social-icons a.facebook:hover {
+    background-color: #3b5998
+}
+
+.social-icons a.twitter:hover {
+    background-color: #00aced
+}
+
+.social-icons a.instagram:hover {
+    background-color: #b6006a
+}
+
+.social-icons a.youtube:hover {
+    background-color: #ea4c4c
+}
+
+@media (max-width:767px) {
+    .social-icons li.title {
+        display: block;
+        margin-right: 0;
+        font-weight: 600
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-brand.abs {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #4caf50;
+}
+
+.navbar {
+    padding: 0rem 0rem;
+}
